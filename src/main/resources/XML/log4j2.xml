@@ -1,0 +1,36 @@
+<configuration status="info">
+    <Properties>
+        <Property name="layout_console">%highlight{%d{YYYY-MM-DD HH:mm:ss.SSS} [%t] %-5level} - Action: %msg%n</Property>
+        <Property name="layout_file">%d{YYYY-MM-DD HH:mm:ss.SSS} [%t] %-5level - Action: %msg%n</Property>
+        <Property name="path">./target/logs/</Property>
+    </Properties>
+
+    <Appenders>
+        <!-- Console Appender -->
+        <console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${layout_console}"></PatternLayout>
+        </console>
+
+        <!-- Rolling File Appender -->
+        <RollingFile name="mifile" fileName="${path}mylog.log"
+                     filePattern="${path}mylog-%d{yyyy-MM-dd}-%i.log.gz">
+            <PatternLayout pattern="${layout_file}"></PatternLayout>
+            <SizeBasedTriggeringPolicy size="5 MB"></SizeBasedTriggeringPolicy>
+            <TimeBasedTriggeringPolicy interval="1" modulate="true"></TimeBasedTriggeringPolicy>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <!-- Root logger configuration -->
+        <Root level="info">
+            <AppenderRef ref="console" level="info"></AppenderRef>
+            <AppenderRef ref="mifile" level="info"></AppenderRef>
+        </Root>
+
+        <!-- Custom Logger for action-specific logs -->
+        <Logger name="ActionLogger" level="info">
+            <AppenderRef ref="console" level="info"></AppenderRef>
+            <AppenderRef ref="mifile" level="info"></AppenderRef>
+        </Logger>
+    </Loggers>
+</configuration>
