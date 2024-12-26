@@ -14,15 +14,16 @@
 6. [Release Notes](#release-notes)
     - [Version 1.0](#version-10)
 7. [Contributing](#contributing)
+
 ---
 ## Project Name:
 ### OrangeHRM Website
-
+---
 ## Project Description:
 (OrangeHRM Website) is an highly modular, and scalable test automation framework specifically engineered for comprehensive end-to-end web application testing. Developed using Selenium WebDriver.
 it offers a robust foundation for creating clean, maintainable, and reusable automated test cases.
 Its modular design ensures flexibility, enabling seamless integration with various tools and technologies, while maintaining high standards of performance, reliability, and test coverage.
-
+---
 # Release Notes
 ## Version 1.0
 This marks the first release of the AutoFramework-2 project.
