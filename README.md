@@ -18,11 +18,14 @@
 ---
 ## Project Name:
 ### OrangeHRM Website
+
 ---
 ## Project Description:
 (OrangeHRM Website) is an highly modular, and scalable test automation framework specifically engineered for comprehensive end-to-end web application testing. Developed using Selenium WebDriver.
 it offers a robust foundation for creating clean, maintainable, and reusable automated test cases.
 Its modular design ensures flexibility, enabling seamless integration with various tools and technologies, while maintaining high standards of performance, reliability, and test coverage.
+
+
 ---
 # Release Notes
 ## Version 1.0
@@ -36,12 +39,12 @@ Future updates will focus on:
 - Ensuring compatibility with emerging tools and technologies.
 - Maintaining alignment with industry standards to deliver a consistently professional and dependable solution.
 
+
 ---
 ### Project Design:
 - Page Object Model (POM)
 
 ---
-
 ## Project Structure
 ```
 AutoFramework/
@@ -53,8 +56,8 @@ AutoFramework/
 ├── pom.xml                              # Maven configuration
 └── README.md                            # Project documentation
 ```
----
 
+---
 ## Tools and Technologies
 - **Java**: Programming language
 - **Selenium WebDriver**: For browser automation
@@ -68,7 +71,6 @@ AutoFramework/
     - **SLF4J**: A logging facade for consistent logging across frameworks.---
 
 ---
-
 ## Contributing
 Contributions are welcome!
 We welcome contributions from QA Automation Testing Engineers! To contribute:
