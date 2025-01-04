@@ -2,7 +2,15 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Parent_Suite">
     <test name="ItestReporter">
-
+        <!--        <classes>-->
+        <!--            <class name="com.test.test"/>-->
+        <!--        </classes>-->
+        <classes>
+            <class name="test"/>
+        </classes>
     </test>
+
 </suite>
+
+
         <!-- Suite -->

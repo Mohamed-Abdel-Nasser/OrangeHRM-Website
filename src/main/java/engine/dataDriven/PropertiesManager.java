@@ -10,7 +10,12 @@ public class PropertiesManager {
     private static final Properties PROPERTIES = new Properties();
 
     public static Properties loadAllFiles() {
-        List<String> filesList = List.of("Credintials", "Path", "Setup");
+        List<String> filesList = List.of(
+                "Credintials",
+                "Path",
+                "Setup"
+        );
+
         for (String file : filesList) {
             try (FileReader fileReader = new FileReader(PATH + file + ".properties")) {
                 PROPERTIES.load(fileReader);

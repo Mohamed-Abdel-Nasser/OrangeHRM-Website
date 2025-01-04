@@ -6,7 +6,7 @@ import org.apache.logging.log4j.core.config.Configurator;
 
 public class LogReport {
 
-    private static volatile LogReport instance;
+    private static LogReport instance;
     private static Logger logger;
     private static final String LOG4J_CONFIG_FILE = "src/main/resources/XML/log4j2.xml";
 

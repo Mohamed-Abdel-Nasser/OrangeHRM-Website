@@ -1,23 +1,27 @@
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.openApplication;
 
 public class test extends BaseTest {
-    openApplication app = new openApplication(driver);
+    openApplication app;
+
+    @BeforeMethod
+    public void setUp() {
+        app = new openApplication(driver);
+    }
 
     @Test
     public void dfsvh() {
-             app.navigateToURL(driver)
+        app.navigateToURL(driver)
                 .returnLoginScreen(driver)
                 .UserName("your_username")
                 .Password("your_password")
                 .clickLoginButton();
     }
-
 
     @Test
     public void dfdsvh() {
-        openApplication app = new openApplication(driver);
-                app.navigateToURL(driver)
+        app.navigateToURL(driver)
                 .returnLoginScreen(driver)
                 .UserName("your_username")
                 .Password("your_password")
@@ -25,9 +29,8 @@ public class test extends BaseTest {
     }
 
     @Test
-    public void dfgbsvh(){
-        openApplication app = new openApplication(driver);
-                app.navigateToURL(driver)
+    public void dfgbsvh() {
+        app.navigateToURL(driver)
                 .returnLoginScreen(driver)
                 .UserName("dsf")
                 .Password("fsd")
@@ -35,22 +38,20 @@ public class test extends BaseTest {
     }
 
     @Test
-    public void dfssvh(){
-        openApplication app = new openApplication(driver);
-                app.navigateToURL(driver)
+    public void dfssvh() {
+        app.navigateToURL(driver)
                 .returnLoginScreen(driver)
                 .UserName("dsf")
                 .Password("fsd")
                 .clickLoginButton();
     }
+
     @Test
-    public void dfsssvh(){
-        openApplication app = new openApplication(driver);
-                app.navigateToURL(driver)
+    public void dfsssvh() {
+        app.navigateToURL(driver)
                 .returnLoginScreen(driver)
                 .UserName("dsf")
                 .Password("fsd")
                 .clickLoginButton();
     }
 }
-
