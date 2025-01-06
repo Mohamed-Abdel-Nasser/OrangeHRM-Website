@@ -1,0 +1,45 @@
+<configuration status="error">
+    <Properties>
+        <!-- Define the pattern for console and file layouts -->
+        <Property name="layout_console">
+            %highlight{%d{dd-MM-yyyy HH:mm:ss.SSS} [%t] %-5level - %msg%n}
+        </Property>
+        <Property name="layout_file">
+            %d{dd-MM-yyyy HH:mm:ss.SSS} [%t] %-5level [%logger{36}] [Thread: %t] [Class: %C{1}] [Method: %M] - %msg%n
+        </Property>
+        <Property name="path">./target/logs/</Property>
+    </Properties>
+
+    <Appenders>
+        <!-- Console Appender with colorized output -->
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${layout_console}" />
+        </Console>
+
+        <!-- Rolling File Appender for file logging -->
+        <RollingFile name="fileAppender" fileName="${path}application.log"
+                     filePattern="${path}application-%d{dd-MM-yyyy}-%i.log.gz">
+            <PatternLayout pattern="${layout_file}" />
+            <Policies>
+                <SizeBasedTriggeringPolicy size="10 MB" />
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
+            </Policies>
+            <DefaultRolloverStrategy max="30" />
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <!-- Root logger configuration for all application logs -->
+        <Root level="info">
+            <AppenderRef ref="console" />
+            <AppenderRef ref="fileAppender" />
+        </Root>
+
+        <!-- Custom logger for action-specific logs (can log at debug level) -->
+        <Logger name="ActionLogger" level="debug" additivity="false">
+            <AppenderRef ref="console" />
+            <AppenderRef ref="fileAppender" />
+        </Logger>
+    </Loggers>
+</configuration>
+

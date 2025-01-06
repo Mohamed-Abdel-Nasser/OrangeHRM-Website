@@ -1,15 +1,22 @@
 package engine.FrameworkConstants;
 
-import engine.dataDriven.PropertiesManager;
+import engine.DataDriven.PropertiesManager;
 
 public class FrameworkConstants {
-    public static String testingLink = PropertiesManager.getPropertiesValue("url");
-    public static String browser = PropertiesManager.getPropertiesValue("browser");
-    public static String executionType = PropertiesManager.getPropertiesValue("executionType");
-    public static String userName = PropertiesManager.getPropertiesValue("UserName");
-    public static String password = PropertiesManager.getPropertiesValue("Password");
 
+    public static String testingLink;
+    public static String browser;
+    public static String executionType;
+    public static String userName;
+    public static String password;
+
+    // Static block to load the configuration
     static {
-        PropertiesManager.loadAllFiles();
+        PropertiesManager.loadConfig();  // Ensure the configuration is loaded before using any properties
+        testingLink = PropertiesManager.getPropertyValue("url");
+        browser = PropertiesManager.getPropertyValue("browser");
+        executionType = PropertiesManager.getPropertyValue("executionType");
+        userName = PropertiesManager.getPropertyValue("UserName");
+        password = PropertiesManager.getPropertyValue("Password");
     }
 }

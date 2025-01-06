@@ -1,3 +1,6 @@
+package TestClass;
+
+import TestBase.BaseTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.openApplication;
@@ -46,12 +49,5 @@ public class test extends BaseTest {
                 .clickLoginButton();
     }
 
-    @Test
-    public void dfsssvh() {
-        app.navigateToURL(driver)
-                .returnLoginScreen(driver)
-                .UserName("dsf")
-                .Password("fsd")
-                .clickLoginButton();
-    }
+
 }
