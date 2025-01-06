@@ -1,8 +1,13 @@
 package engine.FrameworkConstants;
 
 import engine.DataDriven.PropertiesManager;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class FrameworkConstants {
+
+    public FrameworkConstants(WebDriver driver) {
+    }
 
     public static String testingLink;
     public static String browser;
@@ -19,4 +24,6 @@ public class FrameworkConstants {
         userName = PropertiesManager.getPropertyValue("UserName");
         password = PropertiesManager.getPropertyValue("Password");
     }
+
+
 }
